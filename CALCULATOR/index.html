@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Calculator using HTML,CSS,and Javascript</title>
+    <link rel="stylesheet" href="style3.css">
+    </head>
+    <body >
+        
+        <div class="container">
+            
+            <div class="calculator">
+               
+                <form>
+                    <div class="sindhu">
+                  <input type="text" name="display" placeholder="" style="color:rgb(19, 12, 12);background-color:gray);">
+                </div>
+                <div >
+                   <input type="button" value="AC"  onclick="display.value='' " style="background-color:rgb(248, 11, 11)";>
+                   <input type="button" value="DEL"  onclick="display.value = display.value.toString().slice(0,-1)" style="background-color:rgb(248, 11, 11)";>
+                   <input type="button" value="."  onclick="display.value +='.' " style="background-color:rgb(35, 35, 35); color:white;">
+                   <input type="button" value="/"  onclick="display.value +='/' " style="background-color:rgb(35, 35, 35); color:white;">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value+='7'  " style="color:black;">
+                    <input type="button" value="8" onclick="display.value+='8' " style="color:black;">
+                    <input type="button" value="9"  onclick="display.value+='9' " style="color:black;">
+                    <input type="button" value="*"  onclick="display.value+='*' " style="background-color:rgb(35, 35, 35); color:white;">
+                 </div>
+                 <div>
+                    <input type="button" value="4"  onclick="display.value+='4' " style="color:black;">
+                    <input type="button" value="5"  onclick="display.value+='5' " style="color:black;">
+                    <input type="button" value="6"  onclick="display.value+='6' " style="color:black;">
+                    <input type="button" value="-"  onclick="display.value+='-' " style="background-color:rgb(35, 35, 35); color:white;">
+                 </div>
+                 <div>
+                    <input type="button" value='1'  onclick="display.value+='1 ' " style="color:black;">
+                    <input type="button" value="2"  onclick="display.value+='2' " style="color:black;">
+                    <input type="button" value="3"  onclick="display.value+='3' " style="color:black;">
+                    <input type="button" value="+"  onclick="display.value+='+' " style="background-color:rgb(35, 35, 35); color:white;">
+                 </div>
+                 <div>
+                    <input type="button" value="00"  onclick="display.value+='00' " style="color:black;">
+                    <input type="button" value="0"  onclick="display.value+='0' " style="color:black;">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal" style="background-color:rgb(35, 35, 35); color:white;"> 
+                    
+                 </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
