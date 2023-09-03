@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>To-Do List</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIVFRUVFQ8VFRUVDw8PFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFysdHR0tLS0rLSstLS0tKy0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS03LS0tLS0rLTc3LTctLf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUHBv/EACgQAAMAAgICAgICAQUAAAAAAAABAgMREiEEQRMxUWEUkaEicbHw8f/EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAIBEBAQEBAAICAwEBAAAAAAAAAAERAhIhAzETQVEyBP/aAAwDAQACEQMRAD8A9ahA0tl42S60tHQ4f0z5MSMWXxf9R0WBa6L56sZdcSsjwL/v2Mla0WRsdquecFw2Guuiooap2RWsgORm8mhlrRnyy97+x8xPS8GPfs145SE4fr6HbDo+ZhiYyaEphzRFi4ci9lIJErLWQPYnIK5lYj6aclFJmN2GswYNaMtLXYiPKlLv+hWXLsyVJU5/qbb+mvP5CZiW/QV6Ki9Fz0i82/bRjxb9mnxsdJ6b6Bw17N+Az66acfH706IDpFgWYunPRGS9HN8rPs0+fvWzlVWzfifty/Lb9LrKDyKChGmsPC07w5e/0dHBAjw8OuzdCMe+3V8fw5PayF6IZ628Q8EIzQaReQuVh1PTI3oDmx2VbM1Vo0jGzF7IxewkNUMhD5r0Y5eh82ibGkMyRsGcWifMiLKI/SqnQCst2JtjkTb/AA6q/BSoRyI7HidbseUP5Dn8wvlJvK5201RXIy1nB+Yfic7hmavYl5QXkYANZzo3RTK0WkGq8EmN/Qf8dh4ZNMIV6o8IRjhnS8azPxRrxQjPq6fjjQrJTK4k4kmzeS+ujjZ47O35GP2c7PPfRrx1jHv4r0xqB/j+O2/ro1eLhTW2jZCS6QdfIOf+eT7Bix6HBoG5ZjrokUQZxRA0YSgbLgYo2aOXNZWjH5GJ/Z1fgM2SH7RU6F+P+uS2wllGeRhe319iZ8dmms/HDVQU9i/jaZohCtVInwgrDQ/FQ3ZHlV+ErDctAHQozPx/2OdH+NnZSGVJWh6Pxq5FNl8ScQ0/xhB0G0XKDyE+P2XwCUD5xonxkWunnkjiRL2Nc/oW2LV+KRXZsxsxo0YmIry0JGnFRm+QKbFUY3TRbZjWUZOQmjxpxgy49M1PIRR7+2CpMVijodOMqRksRVfAhGy5AoriQMgDS6giQ3iQes8DoFyNRTQabJmxpiK8fXZuuRdSOdF4ssYQf4P7NyRB+R+Mcy8DkqWzo1j2V/HkPJUjHwfoZOPo0KNBcRaeRhyeMn+jLkwtHWqALxbHOlyOTomh2bHopQPyafjK0XEDPiGqQ8ivGBUhJBTJeidIup2IeD9mpgUGmzRj/JplIFwRS0AMJspMGkBYZI5Iyyx6sVPDEi+y8QbQk6SrGxkIoCcdgLYNMZIlDJYIsMIVyICcGQiICUIQgBTFtDStAZQirNbkW8KBcsLWQtWE8aE1LQKmU9NF7ETYTsBhlMTkeiPIJq9gchOUqILtlKymtvo+QlAlMbNirK6JyBSLdlMRQmkFOAZCGqQO1mrE0A0btCrgBKyaI0aviRPhBWxja7DxPsZcFRPYH9tEMJMqZZbBODlhbFbKdC0vEdUFIuR8wBdelbIFxLGjTCbA2VyAsHsmxbonIDwzZexewkwLBEaKTLYAmmLoHM+wUwayLqQGgtk2Bk0Z7yGq5E5cYLjNVlwyZI0wkhLw2QtApDENGKQ2GLoCaAZrVoPYlUEqBF5N0TiUmGgTQcSMakVSAtIpIHFPZVPvv6Gpg0/Q9g62U6LxsVTmLcgyhoNiLRwwxM0NTGmxZCEGnFsCkXLIBlU9CqyDsjMNMVrbia0TmNEXs52zRgsNHXDW2XyF8xayhrPxX5P02ZcVk8rJvQEMNbc85y0EYubC2Gli0CwkLyMYhWSAeJdWRMGnsUh7BxoagTQV9CZRpYmhU4ODVCMcGqGGo6hrRNAJl7GzwxMGgEHoCzC+JVLQVIjEuAlBIhaEdEmXouEMUgztLSIi3JcoC1ZCyACVRexUBoarAZLMls1Z1/gzR29k1rx9aLHP6HwwNgXlAX20oz396Lx2yBpT0VkaAQ9yVEpArfRXZc5BliL0I57P+QXV7EKg+RWq8cKyPsLGDln2HjfQar9HywlQnkVzDUeJzsB9sW2RMR+LQqLWQRzK5hpeLU8pJymTkaMWL2MrzJGmQ1QMSFxGxoLyFOw6xoXWMRzEnsakDikchp6opRbBVF7BmshEyMQUQhAUxYtmqJF8RmMFdXQ3OxPws2ovQ8TO7GV4TLnwP6X1/wAHTaFuRWHz8ljLhwJL8hVP4GUIuxLltRk0LdlOw1WVdMy50PdAXO0KtOZjLstUC0Qlvg+ZasWFKHpZB7ISVsJSMr6C6KLaKYziFgjIkBVKTbhT1oTOkPmhse7psMYKlh8gYWL2WTRQEtBIqQ5Q01OJHJbJsCWkRlbKbEImyFEAwbCVE0MSGLUhhEINnUBaCBYHGfya6ObkpnSzy/Riy9ejPp0/FWbmFNN/+FzC2bMOP1ome2vXUheHFvv/AAMeBGlAUy8YedtczycbTE6OlkezPOJfgWOjnv17ZkWdH4Ew48efwgwr80ZscdFuDapSE5pGznybWCpAG5GJFro5WMnIKIGnZp82h0MySh8sNZ9RoTGrQvFPsJLTHrCnoISrGSypWdgscjCpCGi0ILQRTEIXTKCCQlAaZBhALWXHRoijj4/IZ0PGtv7J561r3xjZssWmMRowsQplkYEFoTUbHMrSJq5cJWBL0NmS2TYYdtLyTrszU99m4z3AqfPTPMP2ylvZp4luBYvzDJeykBVDTmjdi7sHbYu0ybVzkHkPoybHU9ma+iLXT8f8HsrYvkMxP2LyXfRsJjowNr9/0F4a+2adFyOfruz0kvSKdla9AqGNmObGKhSxl2tdj9i5WmaGbMc5B8sqVleTGymVsiAsLqhqYFT7ImB0eyAlgWPnMSbOn4m+iyGPDr+VvlhpkIbxx1YLosgUSEuiKiiErHspWQgyXzJohACaJosgANIz5J2QgqrkINrZZCVwtSJ8idoshFXPthqO9DoxfshCJG1tdDwF0/8Ac00Qhtz9OXr/AEvSAZCFJii2QgGzZOn/AEaMb2iEJn2q/Q3Wg1XRCFM89LLUkIMhEIQA/9k=");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .container {
+                max-width: 1030px;
+                margin: 165px auto;
+                background-image: url("");
+                padding: 40px;
+                border: 1px double rgb(22, 23, 23);
+                border-radius: 30px;
+                box-shadow: 0 4px 6px rgba(224, 48, 48, 0.1);
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #f70707;
+                font-size:300%;
+            }
+
+            .task-input {
+                display: flex;
+                margin-bottom: 0px;
+            }
+
+            .task-input input[type="text"] {
+                flex: 1;
+                padding: 15px;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                border: 1px solid rgb(23, 22, 22);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .task-input input:hover{
+                transform: scale(1.05);
+            }
+
+            .task-input button {
+                background-color: #10f3c5;
+                color: #ec0909;
+                border: 1px solid rgb(22, 23, 23);
+                border-radius: 0 5px 5px 0;
+                padding: 15px 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+               
+            }
+
+            .task-input button:hover {
+                background-color: #97def2;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            table {
+                width: 100%;
+                align-items: center;
+            }
+
+            th,td{
+                padding: 15px;
+                text-align: center;
+                transition: transform 0.3s ease-in-out;
+                padding-left: 10px;
+                padding-right: 10px;
+               
+               
+            }
+th{
+    background-color:#cbe9e3;
+    font-family:Argentaina;
+}
+td{
+    font-family:cursive;
+}
+            th:hover {
+                background-color: #a1e0f3;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>To-Do List</h1>
+            <br>
+            <div class="task-input">
+                <input type="text" id="task" placeholder="Enter your task...">
+                <button id="addTask"><b>Add Your Task</b></button>
+            </div>
+            <table id="taskList">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Task</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody><br><br></tbody>
+            </table>
+        </div>
+        <script src="todolist.js"></script>
+    </body>
+
+</html>
